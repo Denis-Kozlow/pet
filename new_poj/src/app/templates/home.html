@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<main>
+    <a href="http://127.0.0.1:8000/delivery/registration" class="section section1">
+        <h2>Registration</h2>
+        <p>Register the package</p>
+    </a>
+
+    <a href="http://127.0.0.1:8000/delivery/all" class="section section2">
+        <h2>Get packages</h2>
+        <p>Get all my packages</p>
+    </a>
+
+    <a href="http://127.0.0.1:8000/delivery/id" class="section section3">
+        <h2>Get the package</h2>
+        <p>Get the package by id</p>
+    </a>
+</main>
+{% endblock %}

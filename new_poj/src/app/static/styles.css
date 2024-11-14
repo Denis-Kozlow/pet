@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bbe8c6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    -webkit-text-stroke: 2px rgb(155, 206, 159);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: 1;
+    padding: 50px;
+    color: hwb(0 100% 0%);
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.section:hover {
+    background-color: #555;
+}
+
+.section1 {
+    background-color: #007bff;
+}
+
+.section2 {
+    background-color: #6610f2;
+}
+
+.section3 {
+    background-color: #28a745;
+}
+
+.section4 {
+    background-color: #afd739;
+}
+
+.welcome {
+
+    color: #2861a7;
+}
+
+.json-item {
+    background-color: #a0a0a097;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-bottom: 15px;
+}
+
+.json-key {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.json-value {
+    color: rgb(0, 0, 0);
+}
+
+.button {
+    display: inline-block !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: white !important;
+    background-color: #9aac97 !important;
+    text-decoration: none !important;
+    border-radius: 3px !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+
+.button:hover {
+    background-color: #606e7d;
+}
+
+.Icon {
+    padding-left: 20px;
+}

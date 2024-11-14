@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+
+</style>
+
+<h1>Send id package</h1>
+
+<form id="get-request-form">
+    <label for="input-string">Enter id:</label>
+    <input type="text" id="input-string" name="input-string" required>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="result">
+    <div id="json-output"></div>
+</div>
+
+<script>
+    document.getElementById('get-request-form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const inputString = document.getElementById('input-string').value;
+
+        try {
+            const response = await fetch(`/package/id?id_package=${encodeURIComponent(inputString)}`);
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+
+            const outputDiv = document.getElementById('json-output');
+            outputDiv.innerHTML = '';
+
+            if (Object.keys(data).length === 0) {
+                outputDiv.textContent = 'No data found.';
+                return;
+            }
+
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'json-item';
+
+            for (const key in data) {
+                const p = document.createElement('p');
+                p.innerHTML = `<span class="json-key">${key}:</span> <span class="json-value">${data[key]}</span>`;
+                itemDiv.appendChild(p);
+            }
+
+            outputDiv.appendChild(itemDiv);
+
+        } catch (error) {
+            document.getElementById('json-output').textContent = 'An error occurred.';
+            console.error('Error:', error);
+        }
+    });
+</script>
+
+{% endblock %}

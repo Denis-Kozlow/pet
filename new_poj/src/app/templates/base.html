@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Delivery{% endblock %}</title>
+    <link rel="stylesheet" href="/src/app/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Delivery</h1>
+    </header>
+    <a href="/delivery/home" class="button">Home</a>
+    <main>
+
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 The company</p>
+    </footer>
+</body>
+
+</html>
